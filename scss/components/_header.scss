@@ -1,0 +1,135 @@
+@import "../vars";
+@import "../media";
+
+.header {
+  padding-top: 55px;
+
+  @include media(992) {
+    padding-top: 25px;
+  }
+
+  &__wrapper {
+  }
+
+  &__inner {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media(992) {
+      height: 50px;
+    }
+  }
+
+  &__logo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    color: $dark;
+
+    @include media(992) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    span {
+      color: #939393;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 220px;
+    border: 2px solid $accent-color;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark;
+
+    @include media(992) {
+      font-size: 18px;
+      line-height: 27px;
+      width: 160px;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include media(767) {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 17px;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5px;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background: #39515e;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+        background: #39515e;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 22px;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        border-radius: 3px;
+        background: #39515e;
+      }
+    }
+  }
+}
+
+.menu {
+  @include media(767) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $accent-color;
+
+    @include media(992) {
+      margin-right: 30px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
