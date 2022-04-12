@@ -4,6 +4,10 @@
 .header {
   padding-top: 55px;
 
+  a {
+    color: $dark;
+  }
+
   @include media(992) {
     padding-top: 25px;
   }
@@ -40,7 +44,7 @@
       display: block;
     }
 
-    &-active .body {
+    &-active body {
       overflow-y: hidden;
     }
   }
@@ -173,10 +177,6 @@
     width: 40px;
     height: 40px;
     z-index: 8;
-
-    // @include media(767) {
-    //   display: block;
-    // }
 
     @include media(575) {
       left: auto;
