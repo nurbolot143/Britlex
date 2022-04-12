@@ -1,0 +1,166 @@
+@import "../media";
+@import "../vars";
+
+.pricing {
+  padding-bottom: 100px;
+  &__title {
+    text-align: center;
+  }
+
+  @include media(575) {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -25px;
+
+    @include media(992) {
+      margin-left: -20px;
+    }
+
+    @include media(767) {
+      margin-left: -13px;
+    }
+
+    @include media(575) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    padding-left: 50px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media(992) {
+      padding-left: 40px;
+    }
+
+    @include media(767) {
+      padding-left: 26px;
+    }
+
+    @include media(575) {
+      flex: 1 1 auto;
+      margin-bottom: 70px;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    flex: 0 1 300px;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include media(992) {
+      flex: 0 1 200px;
+    }
+
+    @include media(575) {
+      flex: 0 1 290px;
+    }
+
+    @include media(320) {
+      flex: 0 1 200px;
+    }
+  }
+
+  &__body {
+    margin-top: 40px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+  }
+
+  &__text {
+    margin: 19px 0 29px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include media(992) {
+      margin: 14 0 29 0;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include media(767) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include media(320) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  &__link {
+    align-self: start;
+    display: inline-block;
+    padding: 0 18px;
+    border-radius: 5px;
+    background: #eeeeee;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: $accent-color;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 8px;
+      font-size: 18px;
+      line-height: 27px;
+      color: #546269;
+    }
+
+    @include media(992) {
+      font-size: 24px;
+      line-height: 36px;
+      padding: 0 12px;
+
+      span {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @include media(767) {
+      font-size: 22xp;
+      line-height: 33px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include media(575) {
+      align-self: center;
+    }
+
+    @include media(320) {
+      font-size: 18px;
+      line-height: 27px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

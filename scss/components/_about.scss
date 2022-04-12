@@ -1,0 +1,150 @@
+@import "../media";
+@import "../vars";
+
+.about {
+  padding-bottom: 80px;
+  @include media(575) {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 50px 0 23px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media(575) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__body {
+    flex: 0 0 50%;
+
+    @include media(992) {
+      flex: 1 1 auto;
+    }
+
+    @include media(767) {
+      flex: 0 0 50%;
+    }
+
+    @include media(575) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__text {
+    margin: 0 0 65px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include media(992) {
+      margin: 0 0 40px 0;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include media(767) {
+      margin: 0 0 35px 0;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include media(320) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include media(575) {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 65px;
+
+    @include media(992) {
+      font-size: 30px;
+      line-height: 50px;
+      margin-right: 50px;
+    }
+
+    @include media(767) {
+      font-size: 22px;
+    }
+
+    @include media(575) {
+      margin: 10px 50px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include media(575) {
+        margin: 10px 30px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: $main-color;
+
+      @include media(992) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include media(767) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: -50px;
+    flex: 0 1 auto;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media(992) {
+      flex: 0 0 340px;
+    }
+
+    @include media(767) {
+      flex: 0 1 295px;
+    }
+
+    @include media(575) {
+      margin: 0 0 25px 0;
+      flex: 1 1 auto;
+      order: -1;
+    }
+  }
+}
