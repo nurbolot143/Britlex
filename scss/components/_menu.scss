@@ -1,0 +1,77 @@
+@import "../vars";
+@import "../media";
+
+.menu {
+  transition: all 0.3s ease 0s;
+
+  @include media(767) {
+    padding: 140px 40px 0 40px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 430px;
+    background: $light;
+    z-index: 5;
+    overflow-y: hidden;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 105px;
+      width: 364px;
+      height: 1px;
+      background: #c4c4c4;
+      @include media(575) {
+        width: calc(100% - 66px);
+      }
+      @include media(320) {
+        width: calc(100% - 30px);
+        padding-right: 15px;
+      }
+    }
+
+    @include media(575) {
+      width: 100%;
+    }
+
+    @include media(320) {
+      padding: 140px 15px 0 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include media(767) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $accent-color;
+
+    @include media(992) {
+      margin-right: 30px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include media(767) {
+      font-size: 22px;
+      line-height: 60px;
+    }
+  }
+}

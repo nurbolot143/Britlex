@@ -8,10 +8,45 @@
     padding-top: 25px;
   }
 
-  &__wrapper {
+  @include media(767) {
+    &::after {
+      position: fixed;
+      content: "";
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(7, 34, 47, 0.7);
+      z-index: 1;
+
+      @include media(575) {
+        display: none;
+      }
+    }
+
+    &-active::after {
+      width: 100%;
+    }
+
+    &-active .header__btn {
+      left: 0;
+    }
+
+    &-active .menu {
+      left: 0;
+    }
+
+    &-active .header__close-btn {
+      display: block;
+    }
+
+    &-active .body {
+      overflow-y: hidden;
+    }
   }
 
-  &__inner {
+  &__wrapper {
+    position: relative;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -28,6 +63,7 @@
     font-size: 36px;
     line-height: 54px;
     color: $dark;
+    z-index: 10;
 
     @include media(992) {
       font-size: 30px;
@@ -52,11 +88,37 @@
     font-size: 24px;
     line-height: 36px;
     color: $dark;
+    transition: all 0.3s ease 0s;
+    z-index: 9;
 
     @include media(992) {
       font-size: 18px;
       line-height: 27px;
       width: 160px;
+    }
+
+    @include media(767) {
+      position: absolute;
+      top: 500px;
+      left: -150%;
+      width: 210px;
+      height: 60px;
+    }
+
+    @include media(575) {
+      font-size: 22px;
+      line-height: 33px;
+      width: 330px;
+      height: 70px;
+    }
+
+    @include media(390) {
+      width: calc(100% - 15px);
+    }
+
+    @include media(320) {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 
@@ -103,33 +165,22 @@
       }
     }
   }
-}
 
-.menu {
-  @include media(767) {
+  &__close-btn {
     display: none;
-  }
+    position: absolute;
+    left: 335px;
+    width: 40px;
+    height: 40px;
+    z-index: 8;
 
-  &__list {
-    display: flex;
-    align-items: center;
-  }
-  &__item {
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
-    }
+    // @include media(767) {
+    //   display: block;
+    // }
 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    color: $accent-color;
-
-    @include media(992) {
-      margin-right: 30px;
-      font-size: 16px;
-      line-height: 24px;
+    @include media(575) {
+      left: auto;
+      right: 0;
     }
   }
 }

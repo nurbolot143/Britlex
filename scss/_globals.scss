@@ -1,4 +1,5 @@
 @import "./vars";
+@import "./media";
 
 /*Обнуление*/
 * {
@@ -86,4 +87,16 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include media(767) {
+    padding: 0 40px;
+  }
+
+  @include media(575) {
+    padding: 0 33px;
+  }
+
+  @include media(320) {
+    padding: 0 15px;
+  }
 }
