@@ -99,6 +99,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.body-lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -246,9 +250,6 @@ body {
   }
   .header-active .header__close-btn {
     display: block;
-  }
-  .header-active body {
-    overflow-y: hidden;
   }
 }
 
