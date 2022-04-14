@@ -1,0 +1,61 @@
+@import "../media";
+@import "../vars";
+
+.footer {
+  margin-top: 130px;
+
+  @include media(767) {
+    margin-top: 110px;
+  }
+
+  @include media(320) {
+    margin-top: 57px;
+  }
+
+  &__wrapper {
+    padding: 31px 0 55px 0;
+    border-top: 1px solid #c4c4c4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media(470) {
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    a {
+      color: $dark;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+
+    @include media(992) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include media(767) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    @include media(575) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @include media(320) {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+}

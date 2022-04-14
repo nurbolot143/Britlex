@@ -166,3 +166,20 @@ body {
     line-height: 28px;
   }
 }
+
+.logo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+  color: $dark;
+
+  @include media(992) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  span {
+    color: #939393;
+  }
+}
